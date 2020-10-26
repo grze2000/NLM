@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+import * as olProj from 'ol/proj';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  map: any;
+
+  ngOnInit() {
+    this.map = new Map({
+      target: 'map',
+      layers: [
+        new TileLayer({
+          source: new OSM()
+        })
+      ],
+      view: new View({
+        center: olProj.fromLonLat([17.9737, 54.662]),
+        zoom: 13.5
+      }),
+      controls: []
+    });
+  }
+
   title = 'nlm';
 }
