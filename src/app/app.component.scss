@@ -1,0 +1,48 @@
+header {
+    background-color: red;
+    border-bottom: 3px solid silver;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+.description {
+    text-transform: uppercase;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: 1;
+}
+.toolbar {
+    flex-basis: 50px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+
+    .toolbar__item {
+        cursor: pointer;
+        text-align: center;
+    }
+}
+.sidebar {
+    background-color: green;
+    width: 20%;
+}
+body {
+    display: flex;
+}
+.map {
+    flex-grow: 1;
+    background-color: pink;
+}
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    flex-grow: 1;
+}
