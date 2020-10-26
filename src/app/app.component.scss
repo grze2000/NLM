@@ -1,9 +1,24 @@
 header {
-    background-color: red;
-    border-bottom: 3px solid silver;
+    background-color: #F2F5F7;
+    border-bottom: 3px solid #DBE4E9;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.tab {
+    background-color: #FFFFFF;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .tab__btn {
+        margin-left: 50px;
+
+        span {
+            cursor: pointer;
+        }
+    }
 }
 .logo {
     margin: 0;
@@ -20,19 +35,51 @@ main {
     flex-grow: 1;
 }
 .toolbar {
-    flex-basis: 50px;
-    background-color: blue;
+    //flex-basis: 50px;
+    background-color: #F8F8F8;
     display: flex;
     flex-direction: column;
+    font-size: 1.5em;
+    color: #0B4566;
+
+    .toolbar__other {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .toolbar__item {
         cursor: pointer;
         text-align: center;
+        padding: 10px 12px;
     }
 }
 .sidebar {
-    background-color: green;
-    width: 20%;
+    background-color: #F8F8F8;
+    width: 15%;
+    border-left: 1px solid #E4EAEE;
+
+    .sidebar__title {
+        margin: 0;
+        padding: 20px 15px;
+        font-size: 1.3em;
+        color: #0B4566;
+    }
+    .sidebar__section {
+        padding: 10px;
+
+        .section__title {
+            margin: 0 0 15px 0;
+            padding: 0;
+            color: #0B4566;
+        }
+    }
+    .sidebar__title,
+    .sidebar__section {
+        border-bottom: 1px solid #E4EAEE;
+        background-color: #FFFFFF;
+    }
 }
 body {
     display: flex;
@@ -45,4 +92,15 @@ body {
     text-transform: uppercase;
     text-align: center;
     flex-grow: 1;
+    font-weight: bold;
+    color: #0B4566;
+}
+.logo {
+    color: #0B4566;
+    font-size: 1em;
+}
+.description {
+    font-size: 0.8em;
+    color: #93ACBB;
+    font-weight: 500;
 }
