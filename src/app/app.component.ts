@@ -29,5 +29,13 @@ export class AppComponent {
     });
   }
 
+  zoom(zoom) {
+    const view = this.map.getView();
+    view.animate({
+      zoom: view.getZoom() + zoom,
+      duracion: 1000
+    });
+  }
+
   title = 'nlm';
 }
