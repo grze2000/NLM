@@ -27,6 +27,16 @@ export class AppComponent {
     { value: '80', iconClass: 'icon-square', iconColor: '#DB330F' },
     { value: '90', iconClass: 'icon-square', iconColor: '#ED1908' },
     { value: '100', iconClass: 'icon-square', iconColor: '#FF0000' }
+  ];
+  flowLegend: LegendItem[] = [
+    { value: 'Przepływ nieznany', iconClass: 'icon-marker', iconColor: '#B9B9B9'},
+    { value: 'Przepływ - SUW/ZUW', iconClass: 'icon-marker', iconColor: '#03D708'},
+    { value: 'Przepływ - Zbiornik', iconClass: 'icon-marker', iconColor: '#D75D03'},
+    { value: 'Przepływ miedzystrefowy', iconClass: 'icon-marker', iconColor: '#0B4566'},
+    { value: 'Sprzedaż - Online', iconClass: 'icon-marker', iconColor: '#00D097'},
+    { value: 'Sprzedaż - odczyt co 12h', iconClass: 'icon-marker', iconColor: '#B000D0'},
+    { value: 'Sprzedaż - odczyt ręczny', iconClass: 'icon-marker', iconColor: '#780000'},
+    { value: 'Przepływ wirtualny', iconClass: 'icon-marker', iconColor: '#000000'},
   ]
 
   ngOnInit() {

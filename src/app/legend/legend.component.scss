@@ -18,6 +18,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s;
+  font-size: 0.9em;
 
   &.expanded {
     max-height: 500px;
@@ -28,6 +29,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  padding: 2px 0;
 
   &:first-child {
     margin-top: 5px;
@@ -36,6 +38,9 @@
     margin-bottom: 5px;
   }
 }
+.legend__value {
+  margin-right: 30px;
+}
 .legend__icon {
   font-size: 2em;
   margin-left: 5px;
@@ -43,7 +48,6 @@
 .legend__btn {
   margin-left: auto;
   cursor: pointer;
-  margin-left: 30px;
 
   &.legend__btn--on:after {
     content: "\e903";
