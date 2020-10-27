@@ -13,7 +13,7 @@ import LegendItem from './models/LegendItem';
 })
 export class AppComponent {
   map: any;
-  sidebar: boolean = false;
+  sidebar: boolean = true;
   zoneLegend: LegendItem[] = [
     { value: 'brak', iconClass: 'icon-square', iconColor: '#DBE4E9' },
     { value: '0', iconClass: 'icon-square', iconColor: '#00FF00' },

@@ -1,3 +1,5 @@
+@import './app/variables.scss';
+
 @font-face {
   font-family: 'icomoon';
   src:  url('./assets/fonts/icomoon.eot?wc019d');
@@ -63,4 +65,11 @@ body {
 .app {
   display: flex;
   flex-direction: column;
+}
+.text-center {
+  text-align: center;
+}
+.text-blue {
+  color: $btn-color;
+  font-weight: 600;
 }

@@ -2,7 +2,7 @@
 
 .sidebar {
   background-color: #F8F8F8;
-  width: max(15%, 220px);
+  width: max(15%, 250px);
   border-left: 1px solid #E4EAEE;
   position: absolute;
   left: 100%;
@@ -10,9 +10,10 @@
   bottom: 0;
   transition: left .5s;
   z-index: 2;
+  font-size: 0.9em;
 
   &.active {
-    left: calc(100% - max(15%, 220px));
+    left: calc(100% - max(15%, 250px));
   }
   @media #{$mobile} {
     bottom: 45px;
@@ -20,13 +21,13 @@
   .sidebar__title {
     margin: 0;
     padding: 20px 10px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: $main-color;
     display: flex;
     align-items: center;
   }
   .sidebar__section {
-    padding: 10px;
+    padding: 10px 15px;
 
     .section__title {
       margin: 0 0 15px 0;
@@ -48,4 +49,58 @@
       background-color: #F2F5F7;
     }
   }
+}
+.form__group {
+  padding: 8px 0;
+  margin: 5px 0;
+  position: relative;
+}
+.form__btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 2px;
+  cursor: pointer;
+}
+.form__btn--outline {
+  border: 2px solid $btn-color;
+  color: $btn-color;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #45b8e922;
+  }
+}
+.form__btn--fill {
+  border: 2px solid $btn-color;
+  background-color: $btn-color;
+  color: #FFFFFF;
+
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+}
+.form__textfield,
+.form__numberfield,
+.form__select {
+  border: 0;
+  border-bottom: 1px solid #86A2B3;
+  padding: 10px 0 5px 0;
+  width: 100%;
+  margin-bottom: 1px;
+  color: #1E5473;
+
+  &:focus {
+    outline: 0;
+    border-bottom: 2px solid #86A2B3;
+    margin: 0;
+  }
+}
+.form__label {
+  font-size: 0.8em;
+  color: #90AABA;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

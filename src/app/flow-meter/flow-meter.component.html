@@ -7,15 +7,23 @@
   <div class="sidebar__section">
     <h3 class="section__title">Dodaj przepływomierz</h3>
     <form>
-      <div class="form-group">
-        <label for="flowMeterName"></label>
-        <input type="text" name="" id="flowMeterName">
+      <div class="form__group">
+        <label for="flowMeterName" class="form__label">Nazwa</label>
+        <input type="text" name="" id="flowMeterName" class="form__textfield">
       </div>
-      <div class="form-group">
-        <label for="flowMeterType"></label>
-        <select id="flowMeterType">
-          <option value=""></option>
+      <div class="form__group">
+        <label for="flowType" class="form__label">Typ</label>
+        <select id="flowType" class="form__select">
+          <option value="" *ngFor="let type of flowTypes">{{ type }}</option>
         </select>
+      </div>
+      <div class="form__group">
+        <label for="flowValue" class="form__label">Średnia wartość Przepływu [m3/dzień]</label>
+        <input type="number" id="flowValue" class="form__numberfield">
+      </div>
+      <div class="form__group text-center">
+        <input type="reset" value="Wyczyść" class="form__btn form__btn--outline">
+        <input type="submit" value="Dodaj punkt" class="form__btn form__btn--fill">
       </div>
     </form>
   </div>
