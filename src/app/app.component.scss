@@ -86,66 +86,67 @@ main {
   }
 }
 .sidebar {
-    background-color: #F8F8F8;
-    width: max(15%, 200px);
-    border-left: 1px solid #E4EAEE;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    bottom: 0;
-    transition: left .5s;
+  background-color: #F8F8F8;
+  width: max(15%, 200px);
+  border-left: 1px solid #E4EAEE;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  transition: left .5s;
+  z-index: 2;
 
-    &.active {
-        left: calc(100% - max(15%, 200px));
-    }
-    @media #{$mobile} {
-        bottom: 45px;
-    }
-    .sidebar__title {
-        margin: 0;
-        padding: 20px 15px;
-        font-size: 1.3em;
-        color: $main-color;
-        display: flex;
-        align-items: center;
-    }
-    .sidebar__section {
-        padding: 10px;
+  &.active {
+    left: calc(100% - max(15%, 200px));
+  }
+  @media #{$mobile} {
+    bottom: 45px;
+  }
+  .sidebar__title {
+    margin: 0;
+    padding: 20px 15px;
+    font-size: 1.3em;
+    color: $main-color;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar__section {
+    padding: 10px;
 
-        .section__title {
-            margin: 0 0 15px 0;
-            padding: 0;
-            color: $main-color;
-        }
+    .section__title {
+      margin: 0 0 15px 0;
+      padding: 0;
+      color: $main-color;
     }
-    .sidebar__title,
-    .sidebar__section {
-        border-bottom: 1px solid #E4EAEE;
-        background-color: #FFFFFF;
-    }
+  }
+  .sidebar__title,
+  .sidebar__section {
+    border-bottom: 1px solid #E4EAEE;
+    background-color: #FFFFFF;
+  }
 }
 body {
-    display: flex;
+  display: flex;
 }
 .map {
-    flex-grow: 1;
-    position: relative;
+  flex-grow: 1;
+  position: relative;
 }
 .title {
-    text-transform: uppercase;
-    text-align: center;
-    flex-grow: 1;
-    font-weight: bold;
-    color: $main-color;
+  text-transform: uppercase;
+  text-align: center;
+  flex-grow: 1;
+  font-weight: bold;
+  color: $main-color;
 }
 .logo {
-    color: $main-color;
-    font-size: 1em;
+  color: $main-color;
+  font-size: 1em;
 }
 .description {
-    font-size: 0.8em;
-    color: #93ACBB;
-    font-weight: 500;
+  font-size: 0.8em;
+  color: #93ACBB;
+  font-weight: 500;
 }
 .legends {
   position: absolute;
@@ -156,6 +157,16 @@ body {
   flex-direction: row;
 
   app-legend:not(:last-child) {
-    margin-right: 25px;
+    @media #{$mobile} {
+      margin-bottom: 25px;
+    }
+    @media (min-width: 960px) {
+      margin-right: 25px;
+    }
+  }
+
+  @media #{$mobile} {
+    flex-direction: column;
+    right: 10px;
   }
 }
