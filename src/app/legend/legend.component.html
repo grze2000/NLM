@@ -1,0 +1,12 @@
+<div class="legend">
+  <ul class="legend__items" [class.expanded]="expanded">
+    <li *ngFor="let item of items" class="legend__item">
+      <span>{{ item.value }}</span>
+      <span class="legend__icon" [class]="item.iconClass" [style]="'color: '+item.iconColor"></span>
+    </li>
+  </ul>
+  <div class="legend__title">
+    <span class="legend__value">{{ title }}</span>
+    <span class="legend__btn" [class.legend__btn--off]="!expanded" [class.legend__btn--on]="expanded" (click)="expanded = !expanded"></span>
+  </div>
+</div>

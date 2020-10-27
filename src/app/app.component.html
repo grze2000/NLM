@@ -12,7 +12,11 @@
   <div class="title">Mapa</div>
 </header>
 <main>
-  <div id="map" class="map"></div>
+  <div id="map" class="map">
+    <aside class="legends">
+      <app-legend title="Legenda stref" [items]="zoneLegend"></app-legend>
+    </aside>
+  </div>
   <div class="toolbar" [class.sidebar-active]="sidebar">
     <div class="toolbar__map">
       <div class="toolbar__item">
@@ -26,7 +30,7 @@
       </div>
     </div>
     <div class="toolbar__other">
-      <div class="toolbar__item" (click)="toggleSidebar()">
+      <div class="toolbar__item" (click)="sidebar = !sidebar">
         <span class="icon-add"></span>
       </div>
     </div>

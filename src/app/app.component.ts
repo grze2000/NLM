@@ -4,6 +4,7 @@ import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
+import LegendItem from './models/LegendItem';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,20 @@ import * as olProj from 'ol/proj';
 export class AppComponent {
   map: any;
   sidebar: boolean = false;
+  zoneLegend: LegendItem[] = [
+    { value: 'brak', iconClass: 'icon-square', iconColor: '#DBE4E9' },
+    { value: '0', iconClass: 'icon-square', iconColor: '#00FF00' },
+    { value: '10', iconClass: 'icon-square', iconColor: '#5FE645' },
+    { value: '20', iconClass: 'icon-square', iconColor: '#71CC3E' },
+    { value: '30', iconClass: 'icon-square', iconColor: '#82B336' },
+    { value: '40', iconClass: 'icon-square', iconColor: '#94992E' },
+    { value: '50', iconClass: 'icon-square', iconColor: '#A68027' },
+    { value: '60', iconClass: 'icon-square', iconColor: '#B8661F' },
+    { value: '70', iconClass: 'icon-square', iconColor: '#CA4C17' },
+    { value: '80', iconClass: 'icon-square', iconColor: '#DB330F' },
+    { value: '90', iconClass: 'icon-square', iconColor: '#ED1908' },
+    { value: '100', iconClass: 'icon-square', iconColor: '#FF0000' }
+  ]
 
   ngOnInit() {
     this.map = new Map({
@@ -36,11 +51,6 @@ export class AppComponent {
       zoom: view.getZoom() + zoom,
       duracion: 1000
     });
-  }
-
-  toggleSidebar() {
-    console.log('here');
-    this.sidebar = !this.sidebar;
   }
 
   title = 'nlm';
