@@ -1,5 +1,7 @@
+@import '../variables.scss';
+
 .legend {
-  color: #0B4566;
+  color: $main-color;
   font-size: 0.9em;
 }
 .legend__title {
