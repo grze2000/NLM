@@ -12,6 +12,7 @@ import * as olProj from 'ol/proj';
 })
 export class AppComponent {
   map: any;
+  sidebar: boolean = false;
 
   ngOnInit() {
     this.map = new Map({
@@ -35,6 +36,11 @@ export class AppComponent {
       zoom: view.getZoom() + zoom,
       duracion: 1000
     });
+  }
+
+  toggleSidebar() {
+    console.log('here');
+    this.sidebar = !this.sidebar;
   }
 
   title = 'nlm';

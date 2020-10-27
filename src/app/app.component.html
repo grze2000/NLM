@@ -13,7 +13,7 @@
 </header>
 <main>
   <div id="map" class="map"></div>
-  <div class="toolbar">
+  <div class="toolbar" [class.sidebar-active]="sidebar">
     <div class="toolbar__map">
       <div class="toolbar__item">
         <span class="icon-location"></span>
@@ -26,12 +26,12 @@
       </div>
     </div>
     <div class="toolbar__other">
-      <div class="toolbar__item">
+      <div class="toolbar__item" (click)="toggleSidebar()">
         <span class="icon-add"></span>
       </div>
     </div>
   </div>
-  <div class="sidebar">
+  <aside class="sidebar" [class.active]="sidebar">
     <h2 class="sidebar__title"><span class="icon-arrow-left"></span>&nbsp;Przepływomierz</h2>
     <div class="sidebar__section">
       <h3 class="section__title">Instrukcja</h3>
@@ -41,5 +41,5 @@
       <h3 class="section__title">Dodaj przepływomierz</h3>
       <span>Form component here</span>
     </div>
-  </div>
+  </aside>
 </main>
