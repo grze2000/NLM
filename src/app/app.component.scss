@@ -2,88 +2,88 @@ $mobile: "screen and (max-width: 960px)";
 $main-color: #0B4566;
 
 header {
-    background-color: #F2F5F7;
-    border-bottom: 3px solid #DBE4E9;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background-color: #F2F5F7;
+  border-bottom: 3px solid #DBE4E9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .tab {
-    background-color: #FFFFFF;
-    padding: 8px 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background-color: #FFFFFF;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    .tab__btn {
-        margin-left: 50px;
-        color: $main-color;
+  .tab__btn {
+    margin-left: 50px;
+    color: $main-color;
 
-        span {
-            cursor: pointer;
-        }
+    span {
+      cursor: pointer;
     }
+  }
 }
 .logo {
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 .description {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 main {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
 
-    @media #{$mobile} {
-        flex-direction: column;
-    }
+  @media #{$mobile} {
+    flex-direction: column;
+  }
 }
 .toolbar {
-    background-color: #F8F8F8;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  color: $main-color;
+  transition: margin-right .5s;
+
+  @media #{$mobile} {
+    flex-direction: row;
+  }
+  .toolbar__other {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    font-size: 1.5em;
-    color: $main-color;
-    transition: margin-right .5s;
+    justify-content: center;
 
     @media #{$mobile} {
-        flex-direction: row;
+      flex-direction: row;
+      justify-content: flex-end;
     }
-    .toolbar__other {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+  }
+  .toolbar__item {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 12px;
+  }
+  .toolbar__map {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #86A2B3;
 
-        @media #{$mobile} {
-            flex-direction: row;
-            justify-content: flex-end;
-        }
+    @media #{$mobile} {
+      flex-direction: row;
     }
-    .toolbar__item {
-        cursor: pointer;
-        text-align: center;
-        padding: 10px 12px;
+  }
+  &.sidebar-active {
+    @media screen and (min-width: 961px) {
+      margin-right: max(15%, 200px); 
     }
-    .toolbar__map {
-        display: flex;
-        flex-direction: column;
-        border-bottom: 2px solid #86A2B3;
-
-        @media #{$mobile} {
-            flex-direction: row;
-        }
-    }
-    &.sidebar-active {
-        @media screen and (min-width: 961px) {
-           margin-right: max(15%, 200px); 
-        }
-    }
+  }
 }
 .sidebar {
     background-color: #F8F8F8;
