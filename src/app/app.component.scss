@@ -37,6 +37,10 @@ main {
     flex-grow: 1;
     overflow: hidden;
     position: relative;
+
+    @media #{$mobile} {
+        flex-direction: column;
+    }
 }
 .toolbar {
     background-color: #F8F8F8;
@@ -46,16 +50,32 @@ main {
     color: #0B4566;
     transition: margin-right .5s;
 
+    @media #{$mobile} {
+        flex-direction: row;
+    }
     .toolbar__other {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media #{$mobile} {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
     }
     .toolbar__item {
         cursor: pointer;
         text-align: center;
         padding: 10px 12px;
+    }
+    .toolbar__map {
+        display: flex;
+        flex-direction: column;
+
+        @media #{$mobile} {
+            flex-direction: row;
+        }
     }
     &.sidebar-active {
         @media screen and (min-width: 961px) {
@@ -75,6 +95,9 @@ main {
 
     &.active {
         left: calc(100% - max(15%, 200px));
+    }
+    @media #{$mobile} {
+        bottom: 45px;
     }
     .sidebar__title {
         margin: 0;
