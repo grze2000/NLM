@@ -1,4 +1,5 @@
 $mobile: "screen and (max-width: 960px)";
+$main-color: #0B4566;
 
 header {
     background-color: #F2F5F7;
@@ -16,7 +17,7 @@ header {
 
     .tab__btn {
         margin-left: 50px;
-        color: #0B4566;
+        color: $main-color;
 
         span {
             cursor: pointer;
@@ -47,7 +48,7 @@ main {
     display: flex;
     flex-direction: column;
     font-size: 1.5em;
-    color: #0B4566;
+    color: $main-color;
     transition: margin-right .5s;
 
     @media #{$mobile} {
@@ -72,6 +73,7 @@ main {
     .toolbar__map {
         display: flex;
         flex-direction: column;
+        border-bottom: 2px solid #86A2B3;
 
         @media #{$mobile} {
             flex-direction: row;
@@ -103,7 +105,7 @@ main {
         margin: 0;
         padding: 20px 15px;
         font-size: 1.3em;
-        color: #0B4566;
+        color: $main-color;
         display: flex;
         align-items: center;
     }
@@ -113,7 +115,7 @@ main {
         .section__title {
             margin: 0 0 15px 0;
             padding: 0;
-            color: #0B4566;
+            color: $main-color;
         }
     }
     .sidebar__title,
@@ -133,10 +135,10 @@ body {
     text-align: center;
     flex-grow: 1;
     font-weight: bold;
-    color: #0B4566;
+    color: $main-color;
 }
 .logo {
-    color: #0B4566;
+    color: $main-color;
     font-size: 1em;
 }
 .description {
