@@ -31,13 +31,13 @@
       </div>
     </div>
     <div class="toolbar__other">
-      <div class="toolbar__item" (click)="sidebar = !sidebar">
+      <div class="toolbar__item" (click)="sidebar = !sidebar" [class.active]="sidebar">
         <span class="icon-add"></span>
       </div>
     </div>
   </div>
   <aside class="sidebar" [class.active]="sidebar">
-    <h2 class="sidebar__title"><span class="icon-arrow-left"></span>&nbsp;Przepływomierz</h2>
+    <h2 class="sidebar__title"><span class="icon-arrow-left sidebar__btn" (click)="sidebar=false"></span>&nbsp;Przepływomierz</h2>
     <div class="sidebar__section">
       <h3 class="section__title">Instrukcja</h3>
       <span>Wypełnij dane i kliknij przycisk <span class="text-blue">dodaj punkt</span>. Następnie wybierz punkt na mapie i kliknij <span class="text-blue">zatwierdź</span></span>
