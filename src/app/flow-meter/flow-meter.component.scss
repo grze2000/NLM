@@ -95,6 +95,14 @@
     border-bottom: 2px solid #86A2B3;
     margin: 0;
   }
+
+  &.ng-touched:invalid {
+    border-bottom: 1px solid red;
+  }
+
+  &.ng-touched:focus:invalid {
+    border-bottom: 2px solid red;
+  }
 }
 .form__label {
   font-size: 0.8em;

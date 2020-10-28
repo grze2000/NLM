@@ -31,10 +31,10 @@
       </div>
     </div>
     <div class="toolbar__other">
-      <div class="toolbar__item" (click)="sidebar = !sidebar" [class.active]="sidebar">
+      <div class="toolbar__item" (click)="showFlowmeter()" [class.active]="sidebar">
         <span class="icon-add"></span>
       </div>
     </div>
   </div>
-  <app-flow-meter [sidebar]="sidebar" (closeEvent)="sidebar=false"></app-flow-meter>
+  <app-flow-meter [sidebar]="sidebar" (closeEvent)="closeFlowmeter()"></app-flow-meter>
 </main>

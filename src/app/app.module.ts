@@ -1,3 +1,4 @@
+import { MapService } from './services/map.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,9 @@ import { FlowMeterComponent } from './flow-meter/flow-meter.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MapService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
