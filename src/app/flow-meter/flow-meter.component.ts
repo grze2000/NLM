@@ -44,7 +44,7 @@ export class FlowMeterComponent implements OnInit {
         this.mapService.addMarker();
         this.formData = {
           name: '',
-          type: '',
+          type: this.flowTypes[0],
           flowValue: 0
         }
       } else {

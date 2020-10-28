@@ -50,11 +50,12 @@ export class AppComponent {
   markersLayer: any;
   mapMode: Mode;
   flowTypes: any;
+  addMarker: boolean = false;
 
   constructor(private mapService: MapService) {}
 
   ngOnInit() {
-    this.mapService.getMode().subscribe(mode => { this.mapMode = mode });
+    this.mapService.getMode().subscribe(mode => { this.mapMode = mode; this.addMarker = mode === Mode.ADD; });
     this.mapService.getTypes().subscribe(types => {this.flowTypes = types});
 
     // Create layer for markers
@@ -79,7 +80,7 @@ export class AppComponent {
             color: type.color,
             crossOrigin: 'anonymous',
             src: 'assets/marker.svg',
-            imgSize: [24, 24]
+            imgSize: [35, 35]
           })
         }));
         this.markersSource.addFeature(feature);

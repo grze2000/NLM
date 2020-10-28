@@ -4,7 +4,7 @@
 
 TO DO:
 - my location button
-- better form validation
+- better form validation, error messages
 
 ## Project Setup
 

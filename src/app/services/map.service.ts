@@ -11,7 +11,7 @@ export class MapService {
   private markers: Marker[] = []
   private newMarker: Marker = {
     name: '',
-      type: 'Przepływ - Zbiornik',
+      type: '',
       flowValue: 0,
       lonLat: null
   };
