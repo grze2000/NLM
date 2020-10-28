@@ -31,8 +31,13 @@ export class MapService {
   constructor() { }
 
   addMarker(marker: Marker = this.newMarker): void {
+    if(this.newMarker.lonLat === null) {
+      console.error('Point not selected');
+      alert('Point not selected!');
+      return;
+    }
     this.markers.push(marker);
-    this.reset();    
+    this.reset();
   }
 
   getMarkers(): Observable<Marker[]> {
