@@ -5,6 +5,8 @@
 TO DO:
 - my location button
 - better form validation, error messages
+- ability to add marker/fix sidebar (mobile devices)
+- improve accessibility
 
 ## Project Setup
 
